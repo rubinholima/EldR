@@ -1,6 +1,6 @@
-$(document).ready(function() { 
+$(document).ready(function () {
     const obj = {
-        nightlife : {
+        nightlife: {
             name: "Hard Rock Cafe",
             title: "Dance-a-thon",
             date: "Friday, Dec. 30, 2019",
@@ -8,10 +8,10 @@ $(document).ready(function() {
             city: "Boston",
             state: "MA",
             zip: "02851",
-            phone: "617-555-1212", 
-            website: "http://www.hardrock.com"  
+            phone: "617-555-1212",
+            website: "http://www.hardrock.com"
         },
-        dining : {
+        dining: {
             name: "Shake Shack",
             title: "Free Shakes",
             date: "Wednesday, Nov. 30, 2019",
@@ -20,9 +20,9 @@ $(document).ready(function() {
             state: "MA",
             zip: "02851",
             phone: "617-555-1212",
-            website: "http://www.shackshack.com"   
+            website: "http://www.shackshack.com"
         },
-        fitness : {
+        fitness: {
             name: "Planet Fitness",
             title: "Sweating with the Oldies",
             date: "Tuesday, Dec. 6, 2019",
@@ -33,7 +33,7 @@ $(document).ready(function() {
             phone: "617-555-1212",
             website: "http://www.planetfitness.com"
         },
-        entertainment : {
+        entertainment: {
             name: "Boston Common Theater",
             title: "Dance-a-thon",
             date: "Saturday, Jan. 15, 2020",
@@ -45,17 +45,40 @@ $(document).ready(function() {
             website: "http://www.loewstheaters.com"
         }
     }
-    $(".user-selection").on("click", function(e) {
+    $(".user-selection").on("click", function (e) {
         e.preventDefault();
         let newEvent = $(this).val();
         console.log(obj[newEvent].name);
         // create table rows
         let newRow = $("<tr>");
-            newRow.append('<td>' + obj[newEvent].date + "</td>");
-            newRow.append('<td>' + obj[newEvent].name + "</td>");
-            newRow.append('<td>' + obj[newEvent].title + "</td>");
-            newRow.append('<td>' + obj[newEvent].city + ", " + obj[newEvent].state + " " + obj[newEvent].zip + "</td>");
-            newRow.append('<td><a href="#">' + obj[newEvent].website + '</td><a href="#">');
+        newRow.append('<td>' + obj[newEvent].date + "</td>");
+        newRow.append('<td>' + obj[newEvent].name + "</td>");
+        newRow.append('<td>' + obj[newEvent].title + "</td>");
+        newRow.append('<td>' + obj[newEvent].city + ", " + obj[newEvent].state + " " + obj[newEvent].zip + "</td>");
+        newRow.append('<td><a href="#">' + obj[newEvent].website + '</td><a href="#">');
         $("tbody").append(newRow);
     });
-    });
+});
+
+
+$.getJSON(
+
+    "https://cors-anywhere.herokuapp.com/https://samples.openweathermap.org/data/2.5/weather?q=Boston&appid=88f4f1113ee97cdfa2a6bab9f78f9382", function (data) {
+        console.log(data);
+
+
+        var icon = "http://openweathermap.org/img/wn/" + data.weather[0].icon + ".png";
+
+        // originalTemp is the temperature in Kelvin
+        var originalTemp = data.main.temp;
+        var weather = data.weather[0].main;
+
+        // newTemp is the temperature in Fahrenheit
+        var newTemp = (originalTemp * (9 / 5)) - 459.67;
+
+        $(".icon").attr("src", icon);
+        $(".weather").append(weather);
+        $(".temp").append(newTemp.toFixed(0) + "&#176;F ");
+
+    }
+);

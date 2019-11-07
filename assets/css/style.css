@@ -52,3 +52,20 @@ h2 {
     
 }
 
+.icon{
+    width: 50px;
+}
+
+.weather-container{
+    font-size: 15px;
+    margin: 0;
+    /* display: flex;
+    /* flex-direction: row;
+    justify-content: space-evenly; */
+    
+}
+.weather{
+    
+    margin: 0;
+    font-weight: bold;
+}

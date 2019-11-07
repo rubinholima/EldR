@@ -22,79 +22,84 @@
 
 </head>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-info">
-
-    <a class="navbar-brand" href="index.html">EldR</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <button type="submit" id="login" class=" btn btn-primary" value="login"> Login
-    </button>
-    <button type="submit" id="signup" class=" btn btn-primary" value="signup"> Sign UP
-    </button>
-
-</nav>
-
 <body>
+    <div id="main">
+        <div id="main-container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-info">
 
-    <div class="row">
-        <div class="col-md-9">
-            <img src="./assets/images/banner2.png">
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-2 bg-info">
-            <button type="submit" id="nightlife" class="user-selection btn btn-info" value="nightlife"> Nightlife
-            </button>
-            <button type="submit" id="dining" class="user-selection btn btn-info" value="dining"> Dining
-            </button>
-            <button type="submit" id="fitness" class="user-selection btn btn-info" value="fitness"> Fitness
-            </button>
-            <button type="submit" id="entertainment" class="user-selection btn btn-info" value="entertainment">
-                Entertainment </button>
-        </div>
-    </div>
+                <a class="navbar-brand" href="index.html">EldR</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <button type="submit" id="login" class=" btn btn-primary" value="login"> Login
+                </button>
+                <button type="submit" id="signup" class=" btn btn-primary" value="signup"> Sign UP
+                </button>
 
-    <!-- table -->
-    <div class="row">
-        <!-- results panel-->
-        <div class="col-md-8">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h2 class="panel-title bg-info">Events</h2>
+            </nav>
 
+
+
+            <div class="row">
+                <div class="col-md-9">
+                    <img src="./assets/images/banner2.png">
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-2 bg-info">
+                    <button type="submit" id="nightlife" class="user-selection btn btn-info" value="nightlife">
+                        Nightlife
+                    </button>
+                    <button type="submit" id="dining" class="user-selection btn btn-info" value="dining"> Dining
+                    </button>
+                    <button type="submit" id="fitness" class="user-selection btn btn-info" value="fitness"> Fitness
+                    </button>
+                    <button type="submit" id="entertainment" class="user-selection btn btn-info" value="entertainment">
+                        Entertainment </button>
+                </div>
+            </div>
+
+            <!-- table -->
+            <div class="row">
+                <!-- results panel-->
+                <div class="col-md-8">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h2 class="panel-title bg-info">Events</h2>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <p style="margin: 20px; text-align: center;">Current Weather</p>
+                </div>
+
+                <div class="col-md-2">
+                    <div class="weather-container">
+
+                        <img class="icon">
+                        <p class="weather"></p>
+                        <p class="temp"></p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-2">
-            <p style="margin: 20px; text-align: center;">Current Weather</p>
+
+        <div class="panel-body">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Website</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
-
-        <div class="col-md-2">
-            <div class="weather-container">
-
-                <img class="icon">
-                <p class="weather"></p>
-                <p class="temp"></p>
-            </div>
-        </div>
-    </div>
-    </div>
-
-    <div class="panel-body">
-        <table class="table table-striped">
-            <thead>
-                <tr>
-                    <th scope="col">Date</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Event</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Website</th>
-                </tr>
-            </thead>
-            <tbody></tbody>
-        </table>
-    </div>
     </div>
     <!-- </div>
     </div> -->
@@ -348,6 +353,35 @@
         <!-- Copyright -->
 
     </footer>
+    </div>
+    </div>
+
+    <!-- //login and signup html....... -->
+
+    <div id="logininfo">
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form">
+                    <input type="text" id="username" placeholder="user name" />
+                    <input type="password" id="password" placeholder="password" />
+                    <input type="text" id="emailid" placeholder="email id" />
+                    <button id="add-member-btn">Create</button>
+                    <p class="message">Already Registered? <a href="#">Log in</a></p>
+
+                </form>
+                <form class="login-form">
+                    <input type="text" id="username" placeholder="user name" />
+                    <input type="password" id="password" placeholder="password" />
+                    <button type="submit" id="btn" class="btn btn-primary">Submit</button>
+
+                    <!-- <button type="submit" id="login-btn">Log in</button> -->
+                    <p class="message">Not Registered? <a href="#"> Register</a></p>
+
+                </form>
+
+            </div>
+
+        </div>
 
 </body>
 

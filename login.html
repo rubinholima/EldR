@@ -23,7 +23,7 @@
 </head>
 
 <style>
-    body {
+    #logininfo {
 
         background-image: url(https://static.vecteezy.com/system/resources/previews/000/563/939/non_2x/set-of-old-people-isolated-on-a-white-background-vector.jpg);
         height: 100vh;
@@ -60,7 +60,7 @@
         border: 0;
     }
 
-    button {
+    #add-member-btn {
         outline: 0;
         background: #4caf4c;
         width: 100%;
@@ -87,7 +87,7 @@
     }
 </style>
 
-<body>
+<body id="logininfo">
     <div class="login-page">
         <div class="form">
             <form class="register-form">
@@ -153,8 +153,8 @@
 
             $("#add-member-btn").click(function (event) {
                 event.preventDefault();
-                const current = window.location.hostname;
-                console.log(current)
+                // const current = window.location.hostname;
+                // console.log(current)
 
                 // variable for each entry
                 var userName = $("#username").val().trim();
@@ -170,7 +170,7 @@
                 //upload or push the data to database
                 database.ref().push(newMember);
                 console.log(newMember);
-                window.location.href = `${current}/index.html`
+                // window.location.href = `${current}/index.html`
 
                 //clear all data from the input area
 
@@ -179,9 +179,6 @@
                 $("#emailid").val("");
 
 
-                $("#username").bind("click", function () {
-                    $("input[type=text], textarea").val("");
-                });
 
             });
 
@@ -190,7 +187,13 @@
         $("#btn").click(function (event) {
 
             alert("nice");
+
+
         });
+        $("#username").val("");
+        $("#password").val("");
+
+        $("#emailid").val("");
 
 
 

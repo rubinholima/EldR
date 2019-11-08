@@ -32,10 +32,6 @@
 
     }
 
-    a {
-        color: #f2f2f2;
-    }
-
     .login-page {
         width: 360px;
         padding: 10% 0 0;
@@ -64,7 +60,7 @@
         border: 0;
     }
 
-    #addmemberbtn {
+    #add-member-btn {
         outline: 0;
         background: #4caf4c;
         width: 100%;
@@ -86,19 +82,24 @@
         text-decoration: none;
     }
 
-    .register-form {
+    .login-form {
         display: none;
+    }
+
+    #btn a {
+        color: #f2f2f2;
     }
 </style>
 
 <body>
     <div class="login-page">
         <div class="form">
+
             <form class="register-form">
                 <input type="text" id="username" placeholder="user name" />
                 <input type="password" id="password" placeholder="password" />
                 <input type="text" id="emailid" placeholder="email id" />
-                <button type="submit" id="createbtn" class="btn btn-primary"><a href="index.html">Create</a></button>
+                <button type="submit" id="btn" class="btn btn-primary"><a href="index.html">Create</a></button>
                 <!-- <button type="submit" id="add-member-btn"><a href="index.html">Create</a></button> -->
                 <p class="message">Already Registered? <a href="#">Log in</a></p>
 
@@ -114,6 +115,8 @@
 
             </form>
 
+            <!-- </div>
+            </div> -->
         </div>
 
     </div>
@@ -152,7 +155,7 @@
             console.log(typeof (auth))
             //create a function when we click submit button/get the value of each input and trim it
 
-            $("#add-member-btn").click(function (event) {
+            $("#createbtn").click(function (event) {
                 event.preventDefault();
                 // const current = window.location.hostname;
                 // console.log(current)

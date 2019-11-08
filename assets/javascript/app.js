@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
     const obj = {
         nightlife: {
             name: "Hard Rock Cafe",
@@ -84,12 +85,12 @@ $.getJSON(
 );
 
 $(document).ready(function () {
-    let loginbtn = document.getElementById("login");
-    loginbtn.addEventListener("click", myFunction);
-    function myFunction() {
-        $("#logininfo").show();
-        $("#main-container").hide();
-    }
+    // let loginbtn = document.getElementById("login");
+    // loginbtn.addEventListener("click", myFunction);
+    // function myFunction() {
+    //     $("#logininfo").show();
+    //     $("#main-container").hide();
+    // }
 
 
     $(".message a").click(function () {

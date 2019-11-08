@@ -1,5 +1,4 @@
 $(document).ready(function () {
-
     const obj = {
         nightlife: {
             name: "Hard Rock Cafe",
@@ -84,88 +83,88 @@ $.getJSON(
     }
 );
 
-// $(document).ready(function () {
-//     // let loginbtn = document.getElementById("login");
-//     // loginbtn.addEventListener("click", myFunction);
-//     // function myFunction() {
-//     //     $("#logininfo").show();
-//     //     $("#main-container").hide();
-//     // }
+$(document).ready(function () {
+    let loginbtn = document.getElementById("login");
+    loginbtn.addEventListener("click", myFunction);
+    function myFunction() {
+        $("#logininfo").show();
+        $("#main-container").hide();
+    }
 
 
-//     $(".message a").click(function () {
+    $(".message a").click(function () {
 
-//         $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
-//     });
-
-
-//     //  web app's Firebase configuration
-
-//     var firebaseConfig = {
-//         apiKey: "AIzaSyB6nuz_M326fOPxo7-aWQfCMAqkxs3foqY",
-//         authDomain: "elder-ec37d.firebaseapp.com",
-//         databaseURL: "https://elder-ec37d.firebaseio.com",
-//         projectId: "elder-ec37d",
-//         storageBucket: "elder-ec37d.appspot.com",
-//         messagingSenderId: "657890035204",
-//         appId: "1:657890035204:web:a8eefca192ae4225e65751",
-//         measurementId: "G-KS02S1HB4G"
-//     };
-
-//     // Initialize Firebase
-
-//     firebase.initializeApp(firebaseConfig);
+        $("form").animate({ height: "toggle", opacity: "toggle" }, "slow");
+    });
 
 
+    //  web app's Firebase configuration
 
-//     var database = firebase.database();
-//     const auth = firebase.auth();
-//     console.log(typeof (auth))
-//     //create a function when we click submit button/get the value of each input and trim it
+    var firebaseConfig = {
+        apiKey: "AIzaSyB6nuz_M326fOPxo7-aWQfCMAqkxs3foqY",
+        authDomain: "elder-ec37d.firebaseapp.com",
+        databaseURL: "https://elder-ec37d.firebaseio.com",
+        projectId: "elder-ec37d",
+        storageBucket: "elder-ec37d.appspot.com",
+        messagingSenderId: "657890035204",
+        appId: "1:657890035204:web:a8eefca192ae4225e65751",
+        measurementId: "G-KS02S1HB4G"
+    };
 
-//     $("#add-member-btn").click(function (event) {
-//         event.preventDefault();
-//         // const current = window.location.hostname;
-//         // console.log(current)
+    // Initialize Firebase
 
-//         // variable for each entry
-//         var userName = $("#username").val().trim();
-//         var emailId = $("#emailid").val().trim();
-
-//         //variable for data base storage
-//         var newMember = {
-//             name: userName,
-//             emailAdress: emailId,
-//         };
-
-
-//         //upload or push the data to database
-//         database.ref().push(newMember);
-//         console.log(newMember);
-//         // window.location.href = `${current}/index.html`
-
-//         //clear all data from the input area
-
-//         $("#username").val("");
-//         $("#password").val("");
-//         $("#emailid").val("");
+    firebase.initializeApp(firebaseConfig);
 
 
 
-//     });
+    var database = firebase.database();
+    const auth = firebase.auth();
+    console.log(typeof (auth))
+    //create a function when we click submit button/get the value of each input and trim it
+
+    $("#add-member-btn").click(function (event) {
+        event.preventDefault();
+        // const current = window.location.hostname;
+        // console.log(current)
+
+        // variable for each entry
+        var userName = $("#username").val().trim();
+        var emailId = $("#emailid").val().trim();
+
+        //variable for data base storage
+        var newMember = {
+            name: userName,
+            emailAdress: emailId,
+        };
 
 
-// });
-// $("#btn").click(function (event) {
+        //upload or push the data to database
+        database.ref().push(newMember);
+        console.log(newMember);
+        // window.location.href = `${current}/index.html`
 
-//     alert("nice");
+        //clear all data from the input area
+
+        $("#username").val("");
+        $("#password").val("");
+        $("#emailid").val("");
 
 
-// });
-// $("#username").val("");
-// $("#password").val("");
 
-// $("#emailid").val("");
+    });
+
+
+});
+$("#btn").click(function (event) {
+
+    swal("Hello world!");
+
+
+});
+$("#username").val("");
+$("#password").val("");
+
+$("#emailid").val("");
 
 
 

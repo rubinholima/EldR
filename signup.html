@@ -89,6 +89,10 @@
     #btn a {
         color: #f2f2f2;
     }
+
+    #btn1 a {
+        color: #f2f2f2;
+    }
 </style>
 
 <body>
@@ -99,7 +103,7 @@
                 <input type="text" id="username" placeholder="user name" />
                 <input type="password" id="password" placeholder="password" />
                 <input type="text" id="emailid" placeholder="email id" />
-                <button type="submit" id="btn" class="btn btn-primary"><a href="index.html">Create</a></button>
+                <button type="submit" id="btn1" class="btn btn-primary"><a href="index.html">Create</a></button>
                 <!-- <button type="submit" id="add-member-btn"><a href="index.html">Create</a></button> -->
                 <p class="message">Already Registered? <a href="#">Log in</a></p>
 
@@ -155,7 +159,7 @@
             console.log(typeof (auth))
             //create a function when we click submit button/get the value of each input and trim it
 
-            $("#createbtn").click(function (event) {
+            $("#btn1").click(function (event) {
                 event.preventDefault();
                 // const current = window.location.hostname;
                 // console.log(current)
@@ -188,9 +192,9 @@
 
 
         });
-        $("#btn").click(function (event) {
+        $("#btn1").click(function (event) {
 
-            alert("nice");
+            swal("Good job!", "You clicked the button!", "success");
 
 
         });

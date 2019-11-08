@@ -167,7 +167,7 @@ function yelpSelected(newEvent, city) {
 
     // Set the Yelp API variable. This helps with the CORS issue. We may be able to remove once we publish.
     let apiYelp = "https://cors-anywhere.herokuapp.com/https://api.yelp.com/v3/businesses/search?term=" + newEvent + "&location=" + city + ", MA&categories=" + keywords;
-
+    console.log(apiYelp);
   $.ajax({
     url: apiYelp,
     method: "GET",
@@ -179,6 +179,15 @@ function yelpSelected(newEvent, city) {
     },
     
     }).then(function (response) {
+      console.log(response);
+
+    if (!response.businesses) {
+      $("#listings").html("<h6>Sorry, no results matched your search. Here are some other great events happening near you!</h6>");
+      // reset to dining and Boston just so some results are returned
+      newEvent = "dining";
+      city = "Boston";
+      yelpSelected(newEvent, city);
+    }
 
     // update sidebar title based on selection 
     $(".heading").html("<h1>" + newEvent + " near you</h1>");

@@ -154,7 +154,7 @@ function eventfulSelected(newEvent, city) {
           "features": storesDyn,
           "center_long": center_long, // this if we want a dynamic longitude based on search results
           "center_lat": center_lat  // this if we want a dynamic latitude based on search results
-        };
+        }; 
 
         loadMap(newStoresList);
 
